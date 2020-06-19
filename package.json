@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "cross-env UMI_ENV=dev umi dev",
+    "start": "umi dev",
     "serve:qa": "cross-env UMI_ENV=qa umi dev",
     "build:dev": "cross-env UMI_ENV=dev umi build",
     "build:qa": "cross-env UMI_ENV=qa umi build",

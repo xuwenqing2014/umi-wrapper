@@ -1,15 +1,3 @@
 # umi project
 
-## Getting Started
-
-Install dependencies,
-
-```bash
-$ yarn
-```
-
-Start the dev server,
-
-```bash
-$ yarn start
-```
+### 运行起来之后，会console.log两次“wrapper渲染”
