@@ -5,23 +5,16 @@ export default defineConfig({
     type: 'none',
   },
   routes: [
-    { path: '/', component: '@/pages/index' },
+    {
+      path: '/index',
+      component: '@/pages/index',
+      wrappers: ['@/wrappers/auth'],
+    },
+    { path: '/login', component: '@/pages/login' },
   ],
   dva: {},
   antd: {},
   define: {
-    'process.env.AA': 'dev'
+    'process.env.AA': 'dev',
   },
-  chainWebpack(memo, { env }) {
-    
-    const CopyThenAutoGit = require('copy-then-auto-git');
-    memo.plugin('copyThenAutoGit')
-      .use(CopyThenAutoGit, [{
-        branch: 'master', //分支名称
-        version: '', //打包版本
-        assetsDir: 'publish/www/', //移动复制打包文件至XXX
-        gitDir: 'publish',
-        inculdes: [/^.*$/]
-      }]);
-  }
 });
